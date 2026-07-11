@@ -1,0 +1,7 @@
+services:
+  twilio-api:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      UPSTREAM: "https://api.twilio.com"
+    restart: unless-stopped
